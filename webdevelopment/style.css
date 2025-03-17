@@ -7,4 +7,18 @@
   Tested: Feb 24, 2025
 */
 
-h1{color:#3498db;}      
+
+header{
+  padding-top: 64px;
+}
+
+
+h1{
+  color:#3498db;
+}  
+
+
+
+br{
+  padding-top: 20px;
+}
