@@ -1,0 +1,24 @@
+
+ /* Title: Style Sheet
+  Use: Provide a uniform style for all of my different web pages on the website.
+  Author: Zion Black
+  School: University of Missouri
+  Developed Feb 24. 2025
+  Tested: Feb 24, 2025
+*/
+
+
+header{
+  padding-top: 64px;
+}
+
+
+h1{
+  color:#3498db;
+}  
+
+
+
+br{
+  padding-top: 20px;
+}
