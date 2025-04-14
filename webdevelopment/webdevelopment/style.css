@@ -29,7 +29,9 @@ h1{
   font-size: 5vw;
 }  
 
-
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
 br{
   padding-top: 20px;
 }
@@ -128,6 +130,10 @@ color:#ffffff
 
 /* ABOUT STYLING */
 
+.print-about-section{
+  display: none;
+}
+
 .reflection-wrapper{
   padding-left: 20px;
   padding-right: 10px;
@@ -152,10 +158,34 @@ color:#ffffff
   max-height: fit-content;
 }
 
+
+/* About Print Styles */
+
+@media print{
+
+  @page {
+    size: auto;
+    margin: 1in;
+  }
+
+  .print-about-section{
+    display: initial;
+  }
+
+  .about-section, nav{
+    display: none;
+  }
+
+  h1,p{
+    color: black;
+  }
+}
+
 /* ABOUT STYLING */
 
 
  /* REFLECTION STYLING */
+
 .reflection-wrapper{
   padding-left: 20px;
   padding-right: 10px;
