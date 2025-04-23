@@ -1,0 +1,82 @@
+nav
+{
+    width: 100%;
+    background:#00223f
+}
+
+button{
+    visibility: hidden;
+}
+
+nav ul {
+    display:flex ;
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav ul li {
+    transition: 0.5s;
+    list-style:none;
+    position: relative;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border-right: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);;
+    border-top: 1px solid rgb(255, 255, 255);
+    border-left: 1px solid rgb(255, 255, 255);
+
+}
+nav ul li :hover{
+    background: aliceblue;
+    color: #1a91e0;
+}
+
+nav ul li:last-child{
+    border-right: 1px solid rgb(255, 255, 255); 
+}
+nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 0px 20px
+}
+
+nav ul li ul{
+    position: absolute;
+    background: #1a91e0;
+    color: aliceblue;
+    display: block;
+    padding-top: 10px;
+    left:0;
+    width: 123px ;
+    opacity: 0;
+    visibility: hidden;
+
+}
+nav ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 768px){
+
+
+    nav ul li ul{
+        width: 100%;
+        z-index: 1;
+    }
+
+    nav ul{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "Home"
+            "About"
+            "Reflection"
+            "About"
+            "Contact";
+    }
+
+}
