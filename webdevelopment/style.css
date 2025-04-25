@@ -149,11 +149,14 @@ color:#ffffff
   grid-template-rows: auto;
   grid-template-areas:
   "about-subhead"
+  "video"
   "about-paragraph"
   "about-quote"
   "resume"
 }
-
+.video{
+  display: flex;
+}
 .about-paragraph{
   color:#ffffff;
   padding-left: 20px;
@@ -166,6 +169,10 @@ color:#ffffff
 }
 .about-quote{
   color:#ffffff;
+}
+
+.footer-section{
+  display:initial
 }
 
 
@@ -222,4 +229,16 @@ color:#ffffff
   background-image: url(footer.png);
   background-size: cover;
   text-align: center;
+}
+
+.contactimgBIG{
+  position: absolute;
+  width:0px;
+  -webkit-transition: width 0.3s linear 0s;
+  transition: width 0.3s linear 0s;
+  z-index: 15;
+}
+
+.contactimg:hover + .contactimgBIG{
+  width:150px;
 }
