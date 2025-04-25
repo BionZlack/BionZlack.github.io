@@ -4,9 +4,7 @@ nav
     background:#00223f
 }
 
-button{
-    visibility: hidden;
-}
+
 
 nav ul {
     display:flex ;
