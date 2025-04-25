@@ -216,6 +216,122 @@ color:#ffffff
 
   /* REFLECTION STYLING */
 
+/* PROJECTS STYLING*/
+
+
+
+.cpsection{
+    display: grid;
+    grid-gap: lem;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "cpp1body cpp1pic"
+}
+
+
+.cpp1body{
+  color:#ffffff
+}
+
+
+
+
+
+
+
+
+
+/*PROJECT STYLING */
+
+
+
+/* CONTACT STYLING */
+
+        .contact-form {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+        
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .required:after {
+            content: " *";
+            color: #e74c3c;
+        }
+        
+        .submit-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .contact-form {
+                padding: 20px;
+            }
+            
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                padding: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-form {
+                padding: 15px;
+            }
+          }
+
 
 /*Footer STYLING */
 
