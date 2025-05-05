@@ -42,7 +42,7 @@ nav ul li a{
 
 nav ul li ul{
     position: absolute;
-    background: #1a91e0;
+    background: #00223f;
     color: aliceblue;
     display: block;
     padding-top: 10px;
@@ -55,6 +55,7 @@ nav ul li ul{
 nav ul li:hover ul{
     opacity: 1;
     visibility: visible;
+    background-color: #00223f;
 }
 
 @media (max-width: 768px){
