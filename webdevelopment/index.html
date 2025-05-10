@@ -20,6 +20,31 @@ Tested: Mar 16, 2025
               <meta charset="utf-8">
               <title>Zion Blacks Home Page</title>
               <meta name="viewport" content="width=device-width, initial-scale=1">
+              <script>
+                // Function to update visitor count
+                function updateVisitorCount() {
+                    // Check if this is a new visitor (for this browser)
+                    if (!localStorage.getItem('visitedBefore')) {
+                        // Get current count from localStorage or set to 0
+                        let count = localStorage.getItem('visitorCount') || 0;
+                        count = parseInt(count) + 1;
+                        
+                        // Store updated count and mark this visitor
+                        localStorage.setItem('visitorCount', count);
+                        localStorage.setItem('visitedBefore', 'true');
+                        
+                        // Update the display
+                        document.getElementById('visitorCounter').textContent = count;
+                    } else {
+                        // Just display the current count for returning visitors
+                        let count = localStorage.getItem('visitorCount') || 0;
+                        document.getElementById('visitorCounter').textContent = count;
+                    }
+                }
+                
+                // Run when page loads
+                window.onload = updateVisitorCount;
+            </script>
 </head> 
 <nav>
     <ul>
@@ -56,6 +81,8 @@ Tested: Mar 16, 2025
         I have tastefully curated throughout my career as a college data analyst and social media personality. These projects highlight 
         the curiosity and courage it takes to question the status quo understanding of how things work and provide examples of the 
         advancements that my expertise will bring to your team.</p>
+        <p>You are visitor number: <span id="visitorCounter">0</span></p>
+
       </div>
 
     </div>
