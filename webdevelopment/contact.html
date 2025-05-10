@@ -1,89 +1,80 @@
-
-<!--
-Title: Contact Page
-Use: Allow reader to get a in-depth overview of the projects I have completed that have led me down the path to be 'the greatest'
-Author: Zion Black
-School: University of Missouri
-Developed Mar 11. 2025
-Tested: Mar 16, 2025
--->
-
 <!DOCTYPE html>
 <html lang="en-US">
-
-
 <head>
+    <!--
+    Title: Contact Page
+    Use: Allow reader to get an in-depth overview of the projects I have completed that have led me down the path to be 'the greatest'
+    Author: Zion Black
+    School: University of Missouri
+    Developed Mar 11, 2025
+    Tested: Mar 16, 2025
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Me</title>
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap">
     <link rel="shortcut icon" type="image/png" href="BJS.ico">
-    <title>Projects</title>
 </head>
-<nav>
-    <ul>
-        <li><a href="index.html" class="nav" alt="Home">Home</a></li>
-        <li><a href="about.html" class="nav" alt="About">About</a></li>
-        <li><a href="Reflection.html" class="nav" alt="Reflection">Reflection</a></li>
-        <li><a href="project.html" class="nav" alt="Projects">Projects</a>
-              <ul>
-                <li><a href="project.html#AMsection">Amazon</a></li>
-                <li><a href="project.html#VUsection">Veterans United</a></li>
-                <li><a href="project.html#BJSsection">Black Jack Sneakers</a></li>
-              </ul>
-      </li>
-        <li><a href="contact.html" class="nav" alt="Contact">Contact</a></li>
-    </ul>
-</nav>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="nav">Home</a></li>
+            <li><a href="about.html" class="nav">About</a></li>
+            <li><a href="Reflection.html" class="nav">Reflection</a></li>
+            <li><a href="project.html" class="nav">Projects</a>
+                <ul>
+                    <li><a href="project.html#AMsection">Amazon</a></li>
+                    <li><a href="project.html#VUsection">Veterans United</a></li>
+                    <li><a href="project.html#BJSsection">Black Jack Sneakers</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html" class="nav">Contact</a></li>
+        </ul>
+    </nav>
 
-<body> 
-
-    <h1><U>Contact Me</U></h1>
-    
-    <form class="contact-form" action="mailto:zjblac01@gmail.com?Subject=Nice%20To%20Meet%20You" target="_top" method="post" enctype="text/plain">
-
+    <main>
+        <h1 class="underlined">Contact Me</h1>
         
-        <div class="form-group">
-            <label for="firstName" class="required">First Name</label>
-            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required autofocus>
-        </div>
-        
-        <div class="form-group">
-            <label for="lastName" class="required">Last Name</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+        <form class="contact-form" action="mailto:zjblac01@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="firstName" class="required">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required autofocus>
+            </div>
+            
+            <div class="form-group">
+                <label for="lastName" class="required">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email" class="required">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message" class="required">Message</label>
+                <textarea id="message" name="message" placeholder="Enter your message here" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Send Message</button>
+            </div>
+        </form>
+    </main>
 
-        </div>
-        
-        <div class="form-group">
-            <label for="email" class="required">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="message" class="required">Message</label>
-            <textarea id="message" name="message" placeholder="Enter your message here" required></textarea>
-        </div>
-        
-        <div class="form-group">
-            <button type="submit" class="submit-btn">Send Message</button>
-        </div>
-    </form>
-
-
-
-</body>
-<footer> 
+    <footer> 
         <div class="footer-section">
-          <h4>Created By: <b> Zion Black
-             </b> | <img class="contactimg" src="Email.png" title="Email" width="15"> 
-             <img class="contactimgBIG" src="Email.png" title="Email" width="15">
-             
-             Zjbhc6@umsystem.edu | 
-             <img class="contactimg" src="Phone.png" title="Phone" width="15"> 
-             <img class="contactimgBIG" src="Phone.png" title="Phone" width="15"> 
-             
-             1 (888)-888-8888 | © 2025 All Rights Reserved   </h4> 
+            <h4>Created By: <b>Zion Black</b> | 
+                <img class="contactimg" src="Email.png" alt="Email icon" width="15"> 
+                <img class="contactimgBIG" src="Email.png" alt="Email icon" width="15">
+                Zjbhc6@umsystem.edu | 
+                <img class="contactimg" src="Phone.png" alt="Phone icon" width="15"> 
+                <img class="contactimgBIG" src="Phone.png" alt="Phone icon" width="15"> 
+                1 (888)-888-8888 | © 2025 All Rights Reserved
+            </h4> 
         </div>
-</footer>
-
+    </footer>
+</body>
 </html>

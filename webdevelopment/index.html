@@ -1,109 +1,101 @@
-
-<!--
-Title: Home Page
-Use: Allow reader to get a breif overview of my life that has led me down the path to be 'the greatest'
-Author: Zion Black
-School: University of Missouri
-Developed Feb 15. 2025
-Tested: Mar 16, 2025
--->
-
 <!DOCTYPE html>
 <html lang="en-US">
-<style> 
-</style>
 <head>
-
-              <link rel="stylesheet" href="style.css">
-              <link rel="stylesheet" href="nav.css">
-              <link rel="shortcut icon" type="image/png" href="BJS.ico">
-              <meta charset="utf-8">
-              <title>Zion Blacks Home Page</title>
-              <meta name="viewport" content="width=device-width, initial-scale=1">
-              <script>
-                // Function to update visitor count
-                function updateVisitorCount() {
-                    // Check if this is a new visitor (for this browser)
-                    if (!localStorage.getItem('visitedBefore')) {
-                        // Get current count from localStorage or set to 0
-                        let count = localStorage.getItem('visitorCount') || 0;
-                        count = parseInt(count) + 1;
-                        
-                        // Store updated count and mark this visitor
-                        localStorage.setItem('visitorCount', count);
-                        localStorage.setItem('visitedBefore', 'true');
-                        
-                        // Update the display
-                        document.getElementById('visitorCounter').textContent = count;
-                    } else {
-                        // Just display the current count for returning visitors
-                        let count = localStorage.getItem('visitorCount') || 0;
-                        document.getElementById('visitorCounter').textContent = count;
-                    }
-                }
+    <!--
+    Title: Home Page
+    Use: Allow reader to get a brief overview of my life that has led me down the path to be 'the greatest'
+    Author: Zion Black
+    School: University of Missouri
+    Developed Feb 15. 2025
+    Tested: Mar 16, 2025
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zion Black's Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="shortcut icon" type="image/png" href="BJS.ico">
+    <style> 
+        /* Add CSS here if needed */
+    </style>
+    <script>
+        // Function to update visitor count
+        function updateVisitorCount() {
+            // Check if this is a new visitor (for this browser)
+            if (!localStorage.getItem('visitedBefore')) {
+                // Get current count from localStorage or set to 0
+                let count = localStorage.getItem('visitorCount') || 0;
+                count = parseInt(count) + 1;
                 
-                // Run when page loads
-                window.onload = updateVisitorCount;
-            </script>
+                // Store updated count and mark this visitor
+                localStorage.setItem('visitorCount', count);
+                localStorage.setItem('visitedBefore', 'true');
+                
+                // Update the display
+                document.getElementById('visitorCounter').textContent = count;
+            } else {
+                // Just display the current count for returning visitors
+                let count = localStorage.getItem('visitorCount') || 0;
+                document.getElementById('visitorCounter').textContent = count;
+            }
+        }
+        
+        // Run when page loads
+        window.onload = updateVisitorCount;
+    </script>
 </head> 
-<nav>
-    <ul>
-        <li><a href="index.html" class="nav" alt="Home">Home</a></li>
-        <li><a href="about.html" class="nav" alt="About">About</a></li>
-        <li><a href="Reflection.html" class="nav" alt="Reflection">Reflection</a></li>
-        <li><a href="project.html" class="nav" alt="Projects">Projects</a>
-              <ul>
-                  <li><a href="project.html#AMsection">Amazon</a></li>
-                  <li><a href="project.html#VUsection">Veterans United</a></li>
-                  <li><a href="project.html#BJSsection">Black Jack Sneakers</a></li>
-              </ul>
-      </li>
-        <li><a href="contact.html" class="nav" alt="Contact">Contact</a></li>
-    </ul>
-</nav>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="nav">Home</a></li>
+            <li><a href="about.html" class="nav">About</a></li>
+            <li><a href="Reflection.html" class="nav">Reflection</a></li>
+            <li><a href="project.html" class="nav">Projects</a>
+                <ul>
+                    <li><a href="project.html#AMsection">Amazon</a></li>
+                    <li><a href="project.html#VUsection">Veterans United</a></li>
+                    <li><a href="project.html#BJSsection">Black Jack Sneakers</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html" class="nav">Contact</a></li>
+        </ul>
+    </nav>
 
-
-</nav>
-<body> 
-  <div class="hero-section">
-    <div class="header">
-      <h1> Introducing Zion Joseph Black, An emerging leader in data analytics and business strategy. </h1>
+    <div class="hero-section">
+        <div class="header">
+            <h1>Introducing Zion Joseph Black, An emerging leader in data analytics and business strategy.</h1>
+        </div>
+        <div class="hero-wrapper">
+            <div class="column-left">
+                <img src="headshot.jpg" alt="Zion Black headshot" class="hero-img">
+            </div>
+            <div class="column-right">
+                <h2>Website Objective:</h2>
+                <p>Welcome to Zion Black's professional page!</p>
+                <p>This website contains an in-depth look at some of the many projects and proposals 
+                I have tastefully curated throughout my career as a college data analyst and social media personality. These projects highlight 
+                the curiosity and courage it takes to question the status quo understanding of how things work and provide examples of the 
+                advancements that my expertise will bring to your team.</p>
+                <p>You are visitor number: <span id="visitorCounter">0</span></p>
+            </div>
+        </div>
     </div>
-    <div class="hero-wrapper">
-      <div class="column-left">
-        <!--- Headshot -->
-       <img src="headshot.jpg" alt="headshot" class="hero-img" /> 
-      </div>
-      <div class="column-right">
-        <h2>Website Objective: </h2> 
-      <p>Welcome to Zion Black’s professional page!</p>
-      <p>This website contains an in-depth look at some of the many projects and proposals 
-        I have tastefully curated throughout my career as a college data analyst and social media personality. These projects highlight 
-        the curiosity and courage it takes to question the status quo understanding of how things work and provide examples of the 
-        advancements that my expertise will bring to your team.</p>
-        <p>You are visitor number: <span id="visitorCounter">0</span></p>
 
-      </div>
+    <main> 
+        <!-- Content can be added here later -->
+    </main>
 
-    </div>
-  </div>
-  <main> 
-      
-  </main>
-  <footer> 
-    <div class="footer-section">
-      <h4>Created By: <b> Zion Black
-         </b> | <img class="contactimg" src="Email.png" title="Email" width="15"> 
-
-         <img class="contactimgBIG" src="Email.png" title="Email" width="15">
-         
-         Zjbhc6@umsystem.edu | 
-         <img class="contactimg" src="Phone.png" title="Phone" width="15"> 
-
-         <img class="contactimgBIG" src="Phone.png" title="Phone" width="15"> 
-         
-         1 (888)-888-8888 | © 2025 All Rights Reserved   </h4> 
-    </div>
-  </footer>
+    <footer> 
+        <div class="footer-section">
+            <h4>Created By: <b>Zion Black</b> | 
+                <img class="contactimg" src="Email.png" alt="Email icon" width="15">
+                <img class="contactimgBIG" src="Email.png" alt="Email icon" width="15">
+                Zjbhc6@umsystem.edu | 
+                <img class="contactimg" src="Phone.png" alt="Phone icon" width="15">
+                <img class="contactimgBIG" src="Phone.png" alt="Phone icon" width="15">
+                1 (888)-888-8888 | © 2025 All Rights Reserved
+            </h4>
+        </div>
+    </footer>
 </body>
 </html>

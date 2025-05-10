@@ -1,82 +1,107 @@
-nav
-{
+/* Navigation Styles */
+nav {
     width: 100%;
-    background:#00223f
+    background: #00223f;
 }
 
-
-
 nav ul {
-    display:flex ;
+    display: flex;
     justify-content: flex-end;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0;
+    list-style: none;
 }
 
 nav ul li {
-    transition: 0.5s;
-    list-style:none;
+    transition: all 0.5s ease;
     position: relative;
     padding: 10px 15px;
     box-sizing: border-box;
-    border-right: 1px solid rgb(255, 255, 255);
-    border-bottom: 1px solid rgb(255, 255, 255);;
-    border-top: 1px solid rgb(255, 255, 255);
-    border-left: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
     text-align: center;
-
 }
-nav ul li :hover{
+
+nav ul li:last-child {
+    border-right: 1px solid rgb(255, 255, 255);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 0 20px;
+    display: block;
+}
+
+nav ul li:hover {
     background: aliceblue;
+}
+
+nav ul li:hover a {
     color: #1a91e0;
 }
 
-nav ul li:last-child{
-    border-right: 1px solid rgb(255, 255, 255); 
-}
-nav ul li a{
-    text-decoration: none;
-    color: aliceblue;
-    padding: 0px 20px
-}
-
-nav ul li ul{
+/* Dropdown Menu Styles */
+nav ul li ul {
     position: absolute;
     background: #00223f;
-    color: aliceblue;
     display: block;
-    padding-top: 10px;
-    left:0;
-    width: 123px ;
+    padding: 10px 0 0;
+    left: 0;
+    width: 123px;
     opacity: 0;
     visibility: hidden;
-
+    transition: all 0.3s ease;
+    margin: 0;
+    list-style: none;
+    border: 1px solid rgb(255, 255, 255);
 }
-nav ul li:hover ul{
+
+nav ul li:hover ul {
     opacity: 1;
     visibility: visible;
-    background-color: #00223f;
 }
 
-@media (max-width: 768px){
+nav ul li ul li {
+    border: none;
+    padding: 5px 0;
+    width: 100%;
+}
 
+nav ul li ul li a {
+    padding: 5px 20px;
+}
 
-    nav ul li ul{
-        width: 100%;
-        z-index: 1;
-    }
-
-    nav ul{
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-            "Home"
-            "About"
-            "Reflection"
-            "About"
-            "Contact";
+        grid-template-rows: repeat(5, auto);
+        justify-content: center;
     }
 
+    nav ul li {
+        width: 100%;
+        border-right: 1px solid rgb(255, 255, 255);
+        border-bottom: 1px solid rgb(255, 255, 255);
+        border-left: 1px solid rgb(255, 255, 255);
+    }
+
+    nav ul li:last-child {
+        border-bottom: 1px solid rgb(255, 255, 255);
+    }
+
+    nav ul li ul {
+        position: static;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        padding: 0;
+        display: none;
+    }
+
+    nav ul li:hover ul {
+        display: block;
+    }
 }
